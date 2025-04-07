@@ -8,6 +8,7 @@ import Pricing from './components/Pricing';
 import ProblemSolution from './components/ProblemSolution';
 import TechShowcase from './components/TechShowcase';
 import CustomOffer from './components/CustomOffer';
+import CustomAISolutions from './components/CustomAISolutions';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -90,6 +91,7 @@ function App() {
         <Pricing />
         <TechShowcase />
         <ProblemSolution />
+        <CustomAISolutions />
         <CustomOffer />
       </main>
       
