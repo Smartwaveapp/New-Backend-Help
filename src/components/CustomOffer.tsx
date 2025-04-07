@@ -89,6 +89,34 @@ export default function CustomOffer() {
             </div>
 
             <div className="group border border-black/10 p-8 hover:border-black/20 transition-all">
+              <label htmlFor="solution" className="block text-sm uppercase tracking-wider font-medium text-black/80">
+                Interested Solution
+              </label>
+              <div className="relative mt-2">
+                <select
+                  id="solution"
+                  name="solution"
+                  required
+                  className="block w-full border-0 border-b border-black/20 bg-transparent px-0 py-3 text-black focus:border-black/40 focus:ring-0 appearance-none cursor-pointer"
+                >
+                  <option value="" disabled selected>Select a solution</option>
+                  <option value="sales-automation">AI-Driven Sales Automation</option>
+                  <option value="legal-tech">Legal Document Generator</option>
+                  <option value="property-management">Property Management System</option>
+                  <option value="fraud-detection">Financial Fraud Detection</option>
+                  <option value="healthcare">Healthcare Records Management</option>
+                  <option value="market-intelligence">Market Intelligence Platform</option>
+                  <option value="recruiting">AI Recruiting Platform</option>
+                  <option value="cybersecurity">Cybersecurity System</option>
+                  <option value="content-generation">Content Generation Platform</option>
+                  <option value="supply-chain">Supply Chain Optimization</option>
+                  <option value="custom">Custom Solution</option>
+                </select>
+                <ArrowUpRight className="absolute right-0 top-4 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" strokeWidth={1.5} />
+              </div>
+            </div>
+
+            <div className="group border border-black/10 p-8 hover:border-black/20 transition-all">
               <label htmlFor="requirements" className="block text-sm uppercase tracking-wider font-medium text-black/80">
                 Project Requirements
               </label>
