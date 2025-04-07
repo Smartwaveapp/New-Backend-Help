@@ -10,8 +10,11 @@ import TechShowcase from './components/TechShowcase';
 import CustomOffer from './components/CustomOffer';
 import CustomAISolutions from './components/CustomAISolutions';
 
-function App() {
+export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(prev => !prev);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <div className="min-h-screen bg-white">
@@ -24,7 +27,7 @@ function App() {
             </div>
             <button
               className="md:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={toggleMobileMenu}
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6 text-black" strokeWidth={1.5} />
@@ -51,21 +54,21 @@ function App() {
             <div className="flex flex-col space-y-4">
               <a
                 href="#services"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
                 className="text-black/60 hover:text-black transition-colors uppercase text-sm tracking-wider"
               >
                 Services
               </a>
               <a
                 href="#pricing"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
                 className="text-black/60 hover:text-black transition-colors uppercase text-sm tracking-wider"
               >
                 Pricing
               </a>
               <a
                 href="#custom"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
                 className="text-black/60 hover:text-black transition-colors uppercase text-sm tracking-wider"
               >
                 Enterprise
@@ -74,7 +77,7 @@ function App() {
                 href="https://cal.com/backendhelp/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
                 className="minimal-button inline-block text-center"
               >
                 Book a Call
@@ -137,5 +140,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
